@@ -1,0 +1,68 @@
+# Python バイトコード
+__pycache__/
+*.py[cod]
+
+# 仮想環境
+venv/
+env/
+ENV/
+.venv/
+
+# Jupyter Notebook チェックポイント
+.ipynb_checkpoints/
+
+# OS ごとのファイル
+.DS_Store
+Thumbs.db
+
+# ログやキャッシュ
+*.log
+*.tmp
+*.bak
+.cache/
+*.swp
+
+# VSCode 設定（必要に応じて）
+.vscode/
+
+# pipenv / poetry / conda の場合
+Pipfile.lock
+poetry.lock
+*.conda
+
+# Unity のビルド成果物やライブラリ
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+
+# Unity Collaborate キャッシュ
+.collab/
+
+# User-specific files
+UserSettings/
+
+# OS / IDE ごとの不要ファイル
+.DS_Store
+*.swp
+*.tmp
+
+# Visual Studio/JetBrains Rider など IDE の設定
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+
+# Unity のメタファイル除外は **NG**
+# → *.meta は絶対に必要！消すとプロジェクト壊れます
+
+# Git LFSを使っている場合に注意（大きなアセット類）
+*.psd
+*.fbx
+*.mp4
+*.png
