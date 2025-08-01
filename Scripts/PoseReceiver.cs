@@ -11,7 +11,7 @@ public class PoseReceiver : MonoBehaviour
         public Transform jointObject;
     }
 
-    public List<JointSetting> joints; // Inspectorで12個分設定
+    public List<JointSetting> joints; // Inspector?12????
 
     private Dictionary<string, Transform> jointDict;
     private Dictionary<string, Vector3> basePositions;
@@ -85,24 +85,24 @@ public class PoseReceiver : MonoBehaviour
                     Vector3 offset = Vector3.zero;
                     switch (joint.jointName)
                     {
-                        case "head":           offset = poseData.head.ToVector3(); break;
-                        case "shoulder_left":  offset = poseData.shoulder_left.ToVector3(); break;
+                        case "head": offset = poseData.head.ToVector3(); break;
+                        case "shoulder_left": offset = poseData.shoulder_left.ToVector3(); break;
                         case "shoulder_right": offset = poseData.shoulder_right.ToVector3(); break;
-                        case "elbow_left":     offset = poseData.elbow_left.ToVector3(); break;
-                        case "elbow_right":    offset = poseData.elbow_right.ToVector3(); break;
-                        case "wrist_left":     offset = poseData.wrist_left.ToVector3(); break;
-                        case "wrist_right":    offset = poseData.wrist_right.ToVector3(); break;
-                        case "pelvis":         offset = poseData.pelvis.ToVector3(); break;
-                        case "knee_left":      offset = poseData.knee_left.ToVector3(); break;
-                        case "knee_right":     offset = poseData.knee_right.ToVector3(); break;
-                        case "ankle_left":     offset = poseData.ankle_left.ToVector3(); break;
-                        case "ankle_right":    offset = poseData.ankle_right.ToVector3(); break;
+                        case "elbow_left": offset = poseData.elbow_left.ToVector3(); break;
+                        case "elbow_right": offset = poseData.elbow_right.ToVector3(); break;
+                        case "wrist_left": offset = poseData.wrist_left.ToVector3(); break;
+                        case "wrist_right": offset = poseData.wrist_right.ToVector3(); break;
+                        case "pelvis": offset = poseData.pelvis.ToVector3(); break;
+                        case "knee_left": offset = poseData.knee_left.ToVector3(); break;
+                        case "knee_right": offset = poseData.knee_right.ToVector3(); break;
+                        case "ankle_left": offset = poseData.ankle_left.ToVector3(); break;
+                        case "ankle_right": offset = poseData.ankle_right.ToVector3(); break;
                     }
-                    // XY平面のみ移動（Zは初期値を維持）
+                    // XY???????Z????????
                     Vector3 newPos = basePositions[joint.jointName];
                     newPos.x += offset.x;
                     newPos.y += offset.y;
-                    // newPos.zは初期値のまま
+                    // newPos.z???????
                     obj.position = newPos;
                 }
             }
@@ -118,7 +118,7 @@ public class PoseReceiver : MonoBehaviour
         }
     }
 
-    public void StartGame() // 追加: ゲーム開始時に呼ばれる
+    public void StartGame() // ??: ???????????
     {
         if (ws != null && !ws.IsAlive)
         {

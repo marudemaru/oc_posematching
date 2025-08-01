@@ -1,22 +1,25 @@
-﻿using UnityEngine;
-using TMPro; // TextMeshProを扱うために必要
+using UnityEngine;
+using TMPro; // TextMeshPro????????
 
 public class ScoreDisplay : MonoBehaviour
 {
-    // Inspectorから設定するUIテキスト
-    public TextMeshProUGUI scoreText;
 
-    // 毎フレーム呼ばれる
+    // Inspector??????UI????
+    public TextMeshProUGUI scoreText;
+    public static int count;
+
+    // ?????????
     void Update()
     {
-        // scoreTextが設定されていなければ何もしない
+        count = 10 - Collision.count;
+        // scoreText????????????????
         if (scoreText == null)
         {
             return;
         }
-
-        // Collisionスクリプトのcount変数をテキストに表示する
-        // "static"な変数なので、直接「クラス名.変数名」でアクセスできる
-        scoreText.text = "Count: " + Collision.count;
+        
+        // Collision??????count????????????
+        // "static"??????????????.????????????
+        scoreText.text = "Count: " + count;
     }
 }

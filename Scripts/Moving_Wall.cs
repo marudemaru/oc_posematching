@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
@@ -6,7 +6,7 @@ using UnityEngine;
 public class Moving_Wall : MonoBehaviour
 {
     public Wall_Generater generator;
-    public float speed = 50.0f; //速度設定
+    public float speed = 50.0f; //????
 
     private void Update()
     {

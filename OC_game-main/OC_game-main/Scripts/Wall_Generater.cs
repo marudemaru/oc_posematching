@@ -1,4 +1,4 @@
-﻿//using System.Collections;
+//using System.Collections;
 //using System.Collections.Generic;
 //using Unity.VisualScripting;
 //using UnityEngine;
@@ -67,7 +67,7 @@ public class Wall_Generater : MonoBehaviour
         }
 
         number = Random.Range(0, CubePrefabs.Length);
-        GameObject wall = Instantiate(CubePrefabs[number], new Vector3(0, 10, 40), Quaternion.identity);
+        GameObject wall = Instantiate(CubePrefabs[number], new Vector3(0, 10, 20), Quaternion.identity);
 
         Moving_Wall wallscript = wall.GetComponent<Moving_Wall>();
         if (wallscript != null)
